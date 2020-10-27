@@ -1,0 +1,47 @@
+var course = require("db");
+
+<!doctype html>
+<html lang="en">
+<head>
+	<title> Course_directory </title>
+   	<link rel="stylesheet" href="styleforhome.css">
+</head>
+<body>
+    <a href="https://www.iitg.ac.in/" class="logo"><img src="http://www.iitg.ac.in/html/images/logo.png"></a>
+    <table>
+    	<tr>
+    		<td> <a href = "/PH102"> PH102 </a> </td>
+    		<td>Introduction to Electrodynamics</td>
+    	</tr>
+    	<tr>
+    		<td> <a href = "/CS101">CS101</a> </td>
+    		<td>Introduction to Computing</td>
+    	</tr>
+    	<tr>
+    		<td> <a href = "/BT101">BT101</a> </td>
+    		<td>Introduction to Biology</td>
+    	</tr>
+    	<tr>
+    		<td> <a href = "/ME101">ME101</a> </td>
+    		<td>Engineering Mechanics</td>
+    	</tr>
+    	<tr>
+    		<td> <a href = "/CH101">CH101</a> </td>
+    		<td>Chemistry</td>
+    	</tr>
+    </table>
+
+    <div>
+
+    <ul>
+        <% for(var i=0; i< courses_data.length; i++) {%>
+            <li >
+                <span><%= courses_data[i]._id %></span>
+
+            </li>
+        <% } %>
+        </ul>
+    </div>
+
+    <a href="/form">add a course</a>
+</body>
